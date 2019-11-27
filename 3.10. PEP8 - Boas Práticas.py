@@ -2,11 +2,9 @@
 PEP 8 (Python Enhancement Proposals) -> Style Guide for python Code
 
 -----------------------------------------------------------------------
-
 import this -> The Zen of Python
 
-The idea of PEP8 is to write the Python code de Python way
-
+The idea of PEP8 is to write the Python code of Python way
 -----------------------------------------------------------------------
 
 [1] Camel Case to the name of the classes;
@@ -60,14 +58,14 @@ y             = 2
 long_variable = 3
 
 # Do
-1) function(something[1], {outro: 2})
+1) function(something[1], {other: 2})
 2) dict['key'] = list[index]
 3)
 x = 1
 y = 2
 long_variable = 3
 
-[7] Finish instructiion with a new line
+[7] Finish instruction with a new line
 
 """
 
