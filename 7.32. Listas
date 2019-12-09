@@ -1,0 +1,69 @@
+"""
+Lists
+
+lists inn python works like array (vector/matrix),
+the difference between another language that be dynamics and can be any data type.
+
+C or Java Language
+    - Fix size and type
+    or wise, if you create array with integer type with size 5, than the array is ALWAYS integer type and max size 5.
+Python language:
+    - Dynamic: Not has fix size, can create the list simple s and add elements with the memory (RAM) size.
+    - data type: any type.
+
+Lists are represented as brackets: []
+
+"""
+print(type([]))
+
+list_one = [1, 99, 3, 5, 6, 230, 40]
+
+list_two = ['Y', 'u', 'm', 'i']
+
+list_three = []
+
+list_four = list(range(11))
+
+list_five = list("Yumi")
+
+# check the item is inside list.
+num = 8
+if num in list_four:
+    print(f'{num} is inside')
+else:
+    print(f'{num} is not inside')
+
+letter = 'ui'
+if letter in list_five:
+    print(f'{letter} is inside')
+else:
+    print(f'{letter} is not inside')
+
+# We can sort easily
+list_one.sort()
+print(list_one)
+
+# count the number of occurrences
+print(list_one.count(2))
+print(list_two.count('Y'))
+
+"""
+Add item the list: append
+"""
+print(list_one)  # [1, 3, 5, 6, 40, 99, 230]
+list_one.append(2)
+print(list_one)  # [1, 3, 5, 6, 40, 99, 230, 2]
+
+# OBS: The append has one argument
+# list_one.append(12, 54, 11) # Error
+list_one.append([8, 3, 1])  # [1, 3, 5, 6, 40, 99, 230, 2, [8, 3, 1]]
+print(list_one)
+
+sublist = [8, 3, 1]  # [8, 3, 1] is not inside
+if letter in list_one:
+    print(f'{sublist} is inside')
+else:
+    print(f'{sublist} is not inside')
+
+list_one.extend([123, 44, 67])  # [1, 3, 5, 6, 40, 99, 230, 2, [8, 3, 1], 123, 44, 67]
+print(list_one)
