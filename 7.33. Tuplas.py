@@ -64,7 +64,6 @@ print(type(tuple_number))  # <class 'tuple'>
 # print(min(tuple_number))  # TypeError: unsupported operand type(s) for +: 'int' and 'str'
 # print(max(tuple_number))  # TypeError: unsupported operand type(s) for +: 'int' and 'str'
 print(len(tuple_number))  # 6
-"""
 # Tuple concatenated
 tuple_one = (1, 2, 3)
 print(tuple_one)  # (1, 2, 3)
@@ -86,3 +85,75 @@ tuple_one = tuple_one + tuple_two  # unchanging, but can overwrite the value
 print(tuple_one)  # (1, 2, 3, 4, 5, 6)
 print(tuple_two)  # (4, 5, 6)
 
+# element in tuple
+
+tuple_one = (1, 2, 3)
+print(3 in tuple_one)  # True
+print(33 in tuple_one)  # False
+
+# Tuple iteration
+for n in tuple_one:
+    print(n, end=', ')  # 1, 2, 3,
+
+for index, value in enumerate(tuple_one):
+    print(index, value, end=', ')  # 0 1, 1 2, 2 3,
+
+# Count element at tuple
+tuple_two = ('a', 'b', 'c', 'd', 'e', 'a', 'b', 'b')
+print(tuple_two.count('c'))  # 1
+
+tuple_yumi = tuple("Yumi Ouchi")
+print(tuple_yumi)  # ('Y', 'u', 'm', 'i', ' ', 'O', 'u', 'c', 'h', 'i')
+
+print(tuple_yumi.count('Y'))  # 1
+
+# Tuple using
+
+# Tuple ALWAYS not modified at collection
+
+months = ('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
+
+print(months)  # ('January', 'February', 'March', 'April', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
+
+# Access is similar to list
+print(months[5])  # July
+
+# while iteration
+i = 0
+while i < len(months):
+    print(months[i], end=', ')
+    i += 1
+# January, February, March, April, June, July, August, September, October, November, December,
+
+# print(months.index('Playstation'))  # ValueError: tuple.index(x): x not in tuple
+print(months.index('April'))  # 3
+print(months.index('June', 4))  # 4
+
+# slicing
+# tuple[start:end:atep]
+print(months[5:9])  # months = ('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
+
+# Why use tuple?
+#  - Faster then list
+#  - Tuple code more secure
+#  - Unchanging bring more secure
+
+# Copy tuple to another
+tuple_one = (1, 2, 3)
+print(tuple_one)  # (1, 2, 3)
+
+new_tuple = tuple_one  # Not have problem of Shallow Copy
+
+tuple_two = (4, 5, 6)
+print(tuple_two)  # (4, 5, 6)
+
+tuple_one = tuple_one + tuple_two
+
+print(tuple_one)  # (1, 2, 3, 4, 5, 6)
+print(new_tuple)  # (1, 2, 3)
+
+list_ = [1, ]
+print(type(list_))  # <class 'list'>
+list_ = 1,
+print(type(list_))  # <class 'tuple'>
+"""
