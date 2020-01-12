@@ -6,7 +6,7 @@ Exist tuples are very close to list.
 Two differences basics:
 1 - Tuples are represent by parentheses ()
 2 - Tuples are unchanging
-
+"""
 list_number = [1, 5, 3, 4, 2]
 list_number.sort()
 print(list_number)  # [1, 2, 3, 4, 5]
@@ -37,9 +37,9 @@ print(type(tuple_four))  # <class 'tuple'>
 
 # CONCLUSION: Tuple is defined by by comma
 
-(4) -> not tuple
-(4, ) -> Tuple
-4, -> Tuple
+# (4) -> not tuple
+# (4, ) -> Tuple
+# 4, -> Tuple
 
 # Can create dynamically
 tuple_number = tuple(range(11))
@@ -156,4 +156,3 @@ list_ = [1, ]
 print(type(list_))  # <class 'list'>
 list_ = 1,
 print(type(list_))  # <class 'tuple'>
-"""

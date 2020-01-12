@@ -1,17 +1,17 @@
-"""
-Lists
 
-lists inn python works like array (vector/matrix),
-the difference between another language that be dynamics and can be any data type.
+# Lists
 
-C or Java Language
-    - Fix size and type
-    or wise, if you create array with integer type with size 5, than the array is ALWAYS integer type and max size 5.
-Python language:
-    - Dynamic: Not has fix size, can create the list simple s and add elements with the memory (RAM) size.
-    - data type: any type.
+# lists inn python works like array (vector/matrix),
+# the difference between another language that be dynamics and can be any data type.
 
-Lists are represented as brackets: []
+# C or Java Language
+#     - Fix size and type
+#     or wise, if you create array with integer type with size 5, than the array is ALWAYS integer type and max size 5.
+# Python language:
+#     - Dynamic: Not has fix size, can create the list simple s and add elements with the memory (RAM) size.
+#     - data type: any type.
+#
+# Lists are represented as brackets: []
 
 print(type([]))
 
@@ -46,9 +46,8 @@ print(list_one)
 print(list_one.count(2))
 print(list_two.count('Y'))
 
-" ""
-#Add item the list: append
-" ""
+# Add item the list: append
+
 print(list_one)  # [1, 3, 5, 6, 40, 99, 230]
 list_one.append(2)  # one element
 print(list_one)  # [1, 3, 5, 6, 40, 99, 230, 2]
@@ -309,7 +308,6 @@ print(num2)  # 2
 print(num3)  # 3
 
 # OBS: Unpack - number different of elements => Value Error
-"""
 # Copy list to another (Shallow Copy and Deep Copy)
 
 # Way 1 - Deep Copy

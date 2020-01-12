@@ -112,6 +112,7 @@ print(increase())  # 2
 print(increase())  # 3
 """
 
+
 def out():
     count = 0
 
@@ -119,7 +120,9 @@ def out():
         nonlocal count  # not global and not local (function before)
         count = count + 1
         return count
+
     return inside()
+
 
 print(out())  # 1
 print(out())  # 1
