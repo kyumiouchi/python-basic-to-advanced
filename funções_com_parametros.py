@@ -77,10 +77,12 @@ def odd_sum(number):
             total = total + num
     return total
 
+if __name__ == '__main__':
+    list_value = [1, 2, 3, 4, 5, 6, 7]
 
-list_value = [1, 2, 3, 4, 5, 6, 7]
+    print(odd_sum(list_value))  # 16
 
-print(odd_sum(list_value))  # 16
-
-tuple_value = 1, 2, 3, 4, 5, 6, 7
-print(odd_sum(tuple_value))  # 16
+    tuple_value = 1, 2, 3, 4, 5, 6, 7
+    print(odd_sum(tuple_value))  # 16
+# else:
+#     print('The function module was imported')
