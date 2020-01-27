@@ -25,3 +25,10 @@ from funções_com_parametros import odd_sum
 
 print(odd_sum([1, 2, 3, 4]))
 """
+import first
+import second
+
+print(dir())
+# ['__annotations__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__',
+# '__spec__', 'first', 'second']
+print(first.__name__)  # first
