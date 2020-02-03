@@ -49,8 +49,6 @@ os.makedirs('Y:/Study/Python-basico-avancado/templates2/z')
 
 os.makedirs('Y:/Study/Python-basico-avancado/templates2/z', exist_ok=True)
 # No Error exception to create
-"""
-import os
 
 # Directory
 # os.rename('templates2', 'yumi2')
@@ -59,6 +57,72 @@ import os
 # OBS: If directory is not empty, OSError
 
 # Files
-os.rename('yumi2/z/teste.py', 'test_yumi.py')
+os.rename('text.txt', 'text2.py')
+
+# Attention: When you delete file/folder, those desappear and does not go to trash.
+os.remove('geek.txt')
+
+# OBS: if the file is using then error.
+# OBS: if not exist FileNotFoundError: [Errno 2] No such file or directory: 'geek.txt'
+
+# os.remove('yumi2')
+# OBS: Just remove file. IsADirectoryError: [Errno 21] Is a directory: 'yumi2'
+
+os.rmdir('yumi2/z/k')
+# OBS: if directory is not empty. OSError: [Errno 39] Directory not empty: 'yumi2/z'
+# OBS: if not directory not exist. FileNotFoundError: [Errno 2] No such file or directory: 'yumi2/z/k'
+
+for file in os.scandir('yumi2/z'):
+    if file.is_file():
+        os.remove(file.path)
+    else:
+        os.rmdir(file.path)
+
+os.removedirs('yumi2/z/a/b')
+# remove yumi2/z/a/b directories
+
+conda install send2trash
+
+from send2trash import send2trash
+os.remove('test_yumi.py')  # delete immediately
+
+send2trash('text2.py')  # go to trash
+
+# CREATE DIRECTORY TEMPORARY
+# Work with temporary director
+import os
+import tempfile
+
+with tempfile.TemporaryDirectory() as tmp:
+    print(f'Tmeporary file {tmp}')
+    with open(os.path.join(tmp, 'temp_file.txt'), 'w') as file:
+        file.write('Yumi Ouchi\n')
+    input()
+
+# create directory 'tmp', open the same and create a text. At the end, use the input() to keep the file alive.
+
+
+# Create file temporary
+
+with tempfile.TemporaryDirectory() as tmp:
+    tmp.write(b'Yumi Ouchi\n')
+    tmp.seek(0)
+    print(tmp.read())
+
+file = tempfile.TemporaryDirectory()
+file.write(b'Yumi Ouchi\n')
+file.seek(0)
+print(file.read())
+file.close()
+
+
+file = tempfile.NamedTemporaryFile()
+file.write(b'Yumi Ouchi\n')
+print(file.name)
+print(file.read())
+input()
+file.close()
+"""
+import tempfile
 
 
